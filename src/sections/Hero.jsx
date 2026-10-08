@@ -1,0 +1,46 @@
+export default function Hero() {
+  return (
+    <section className="relative mx-auto grid max-w-6xl gap-14 px-5 py-20 sm:px-8 sm:py-28 lg:grid-cols-[1.2fr_0.8fr] lg:items-center lg:gap-16">
+      <div className="pointer-events-none absolute -left-48 top-12 h-96 w-96 rounded-full bg-royal/10 blur-3xl" />
+      <div className="relative">
+        <p className="mb-6 flex items-center gap-3 font-code text-xs font-medium uppercase tracking-[0.18em] text-royal-soft sm:text-sm">
+          <span className="h-px w-8 bg-royal" /> Web Developer
+        </p>
+        <h1 className="max-w-3xl text-5xl font-semibold leading-[1.08] tracking-[-0.04em] sm:text-6xl lg:text-7xl">
+          Thoughtful websites, <span className="text-slate-500">built with care.</span>
+        </h1>
+        <p className="mt-7 max-w-xl text-base leading-8 text-slate-400 sm:text-lg">
+          I’m Rosemary Ndubuisi. I turn ideas into clear, engaging web experiences with a focus on thoughtful details and dependable code.
+        </p>
+        <div className="mt-9 flex flex-wrap items-center gap-5">
+          <a href="#projects" className="rounded-full bg-royal px-6 py-3 text-sm font-semibold text-white transition hover:bg-royal/90 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-royal">
+            Explore my work <span aria-hidden="true">↓</span>
+          </a>
+          <a href="#about" className="text-sm font-medium text-slate-300 transition hover:text-white">
+            A little about me <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+      <div className="relative mx-auto w-full max-w-sm lg:max-w-none">
+        <div className="absolute -inset-5 rounded-[2rem] border border-royal/15" />
+        <div className="relative flex aspect-[4/4.5] flex-col justify-between overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-slate-800 via-slate-900 to-[#111a2d] p-7 sm:p-9">
+          <div className="absolute -right-20 -top-16 h-64 w-64 rounded-full border border-royal/25" />
+          <div className="absolute -right-8 -top-4 h-40 w-40 rounded-full border border-royal/25" />
+          <div className="absolute bottom-16 left-10 h-40 w-40 rounded-full bg-royal/20 blur-3xl" />
+          <p className="relative font-code text-xs uppercase tracking-[0.12em] text-slate-400">Portfolio · 2026</p>
+          <div className="relative">
+            <p className="text-8xl font-semibold tracking-[-0.08em] text-white/90 sm:text-9xl">RN</p>
+            <div className="mt-5 h-px w-full bg-white/15" />
+            <div className="mt-4 flex items-center justify-between font-code text-xs uppercase tracking-[0.12em] text-slate-400">
+              <span>Design with purpose</span>
+              <span className="text-royal-soft">01 / 01</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+
+

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Rosemary Ndubuisi monogram</title>
+  <defs>
+    <linearGradient id="blue" x1="10" y1="8" x2="54" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#315CE8" />
+      <stop offset="1" stop-color="#7898FF" />
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+    </filter>
+  </defs>
+  <rect width="64" height="64" rx="19" fill="#0A1020" />
+  <path d="M10 19V13a3 3 0 0 1 3-3h6M45 10h6a3 3 0 0 1 3 3v6M54 45v6a3 3 0 0 1-3 3h-6M19 54h-6a3 3 0 0 1-3-3v-6" fill="none" stroke="url(#blue)" stroke-linecap="round" stroke-width="2" opacity=".75" />
+  <text x="9" y="43" fill="#F6F8FF" font-family="Arial, sans-serif" font-size="29" font-weight="700" letter-spacing="-3">R</text>
+  <text x="29" y="43" fill="url(#blue)" font-family="Arial, sans-serif" font-size="29" font-weight="700" letter-spacing="-3">N</text>
+  <path d="m49 20 2.1 4.4 4.9.7-3.5 3.4.8 4.8-4.3-2.3-4.3 2.3.8-4.8-3.5-3.4 4.9-.7L49 20Z" fill="#7898FF" filter="url(#glow)" />
+</svg>
