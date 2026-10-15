@@ -7,10 +7,10 @@ import rovelleVelvetRose from '../assets/rovelle-velvet-rose.png'
 const projects = [
   {
     id: '01',
-    category: 'Farm-to-buyer marketplace',
+    category: 'Farmer-to-buyer marketplace',
     title: 'AgroPlug',
     description:
-      'AgroPlug connects farmers in Abia with nearby buyers. My work includes the storefront, produce search and filters, farmer and buyer sign-up, and the farmer dashboard UI.',
+      'AgroPlug connects farmers in Abia with nearby buyers. My work includes the storefront, produce search and filters, farmer and buyer sign-up and dashboard UI.',
     technologies: ['HTML', 'Tailwind CSS', 'JavaScript', 'PHP', 'MySQL'],
     image: agroPlugMarket,
     imageAlt: 'A farmer and buyer exchanging produce at a local market',
@@ -21,7 +21,7 @@ const projects = [
     category: 'Community website',
     title: 'Mater Dei Cathedral Parish Website',
     description:
-      'I built a multi-page website for Mater Dei Cathedral Parish to help visitors find Mass times, sacrament details, parish life, events, and announcements. I also configured Pages CMS for Sunday updates and event listings.',
+      'A multi-page website for Mater Dei Cathedral Parish to help visitors find Mass times, sacrament details, parish life, events, and announcements.',
     technologies: ['HTML', 'Tailwind CSS', 'JavaScript', 'Pages CMS'],
     image: materDeiCathedral,
     imageAlt: 'Exterior of Mater Dei Cathedral Parish',
@@ -94,7 +94,7 @@ export default function Projects() {
               Selected work
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
-              Projects
+             My Projects
             </h2>
           </div>
           <p className="max-w-md text-sm leading-7 text-slate-400">
@@ -231,19 +231,19 @@ export default function Projects() {
                   >
                     <div aria-hidden="true" className="hero-orbit hero-orbit-outer absolute -right-16 -top-20 h-56 w-56 rounded-full border border-royal/20" />
                     <div className="relative">
-                      <p className="font-code text-xs uppercase tracking-[0.16em] text-royal-soft">Have an idea?</p>
+                      <p className="font-code text-xs uppercase tracking-[0.16em] text-royal-soft">Need a website?</p>
                       <h3 className="mt-4 max-w-xs text-2xl font-semibold leading-tight text-white sm:text-3xl">
-                        Let’s make something people love.
+                        Let’s build one for you.
                       </h3>
                       <p className="mt-4 text-sm leading-6 text-slate-400">
-                        I’m always happy to hear about a thoughtful new project.
+                        I create clear, responsive websites for businesses, organizations, and personal projects.
                       </p>
                     </div>
                     <a
                       href="#contact"
                       className="glass-shine relative z-10 mt-8 inline-flex w-fit items-center gap-2 rounded-full border border-white/20 px-4 py-2.5 text-sm font-medium text-white transition hover:border-royal-soft hover:text-royal-soft"
                     >
-                      Let’s talk <span aria-hidden="true">↗</span>
+                      Discuss your website <span aria-hidden="true">↗</span>
                     </a>
                   </aside>
                 )}

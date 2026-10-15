@@ -10,7 +10,7 @@ export default function Hero() {
           Thoughtful websites, <span className="text-slate-500">built with care.</span>
         </h1>
         <p className="mt-7 max-w-xl text-base leading-8 text-slate-400 sm:text-lg">
-          I’m Rosemary Ndubuisi. I turn ideas into clear, engaging web experiences with a focus on thoughtful details and dependable code.
+          I’m Rosemary Ndubuisi, a web developer available for projects. I build clear, engaging websites for businesses, organizations, and individuals—with care for the people who use them.
         </p>
         <div className="mt-9 flex flex-wrap items-center gap-5">
           <a href="#projects" className="glass-shine rounded-full bg-royal px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-1 hover:bg-royal/90 hover:shadow-lg hover:shadow-royal/25 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-royal">
