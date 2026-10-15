@@ -1,7 +1,7 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import agroPlugMarket from '../assets/agroplug-market.jpg'
 import materDeiCathedral from '../assets/mater-dei-cathedral.jpg'
-import pikahabitMascot from '../assets/pikahabit-mascot.gif'
+import pikahabitMascot from '../assets/pikahabit-mascot.png'
 import rovelleVelvetRose from '../assets/rovelle-velvet-rose.png'
 
 const projects = [
@@ -35,7 +35,7 @@ const projects = [
       'A friendly reminder app for the little things that are easy to forget, like drinking water or studying. Add a reminder, choose when it repeats, and get a gentle browser nudge.',
     technologies: ['HTML', 'CSS', 'JavaScript', 'Browser Notifications'],
     image: pikahabitMascot,
-    imageAlt: 'Animated Pikachu mascot from PikaHabit',
+    imageAlt: 'Pikachu mascot illustration from PikaHabit',
     imageFit: 'contain',
     artStyle: 'pikahabit',
     websiteUrl: 'https://pikahabit-rho.vercel.app/',
@@ -62,20 +62,25 @@ const slides = Array.from(
 
 export default function Projects() {
   const trackRef = useRef(null)
+  const scrollTimer = useRef(null)
   const [activeSlide, setActiveSlide] = useState(0)
 
   const goToSlide = (index) => {
     const track = trackRef.current
     if (!track) return
     track.scrollTo({ left: index * track.clientWidth, behavior: 'smooth' })
-    setActiveSlide(index)
   }
 
   const updateActiveSlide = () => {
-    const track = trackRef.current
-    if (!track || !track.clientWidth) return
-    setActiveSlide(Math.round(track.scrollLeft / track.clientWidth))
+    window.clearTimeout(scrollTimer.current)
+    scrollTimer.current = window.setTimeout(() => {
+      const track = trackRef.current
+      if (!track || !track.clientWidth) return
+      setActiveSlide(Math.round(track.scrollLeft / track.clientWidth))
+    }, 140)
   }
+
+  useEffect(() => () => window.clearTimeout(scrollTimer.current), [])
 
   return (
     <section
@@ -104,7 +109,7 @@ export default function Projects() {
           aria-label="Selected projects"
           aria-roledescription="carousel"
           tabIndex={0}
-          className="mt-10 flex snap-x snap-mandatory overflow-x-auto scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="mt-10 flex snap-x snap-mandatory [scroll-snap-stop:always] overflow-x-auto scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {slides.map((slide) => (
             <div
@@ -113,7 +118,7 @@ export default function Projects() {
               aria-roledescription="slide"
               className="w-full shrink-0 snap-start"
             >
-              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              <div className={`grid gap-4 ${slide.length === 1 ? 'md:grid-cols-2' : 'md:grid-cols-2 lg:grid-cols-3'}`}>
                 {slide.map((project, projectIndex) => (
                   <article
                     key={project.id}
@@ -146,9 +151,9 @@ export default function Projects() {
                           <img
                             src={project.image}
                             alt={project.imageAlt}
-                            className={`absolute inset-0 h-full w-full transition duration-500 group-hover:scale-[1.03] ${
+                            className={`absolute inset-0 h-full w-full transition duration-700 group-hover:scale-[1.03] ${
                               project.imageFit === 'contain' ? 'object-contain p-3' : 'object-cover'
-                            } ${project.artStyle === 'pikahabit' ? 'drop-shadow-[0_0_24px_rgba(255,211,44,0.35)]' : ''}`}
+                            } ${project.artStyle === 'pikahabit' ? 'pikahabit-image drop-shadow-[0_0_24px_rgba(255,211,44,0.35)]' : ''}`}
                           />
                           {project.artStyle !== 'rovelle' && (
                             <div
@@ -218,6 +223,30 @@ export default function Projects() {
                     )}
                   </article>
                 ))}
+                {slide.length < projectsPerSlide && (
+                  <aside
+                    data-reveal
+                    style={{ '--reveal-delay': `${slide.length * 100}ms` }}
+                    className="contact-card relative flex min-h-[290px] flex-col justify-between overflow-hidden rounded-2xl border border-royal/25 bg-gradient-to-br from-royal/15 via-slate-900/80 to-slate-900/60 p-6 sm:p-8"
+                  >
+                    <div aria-hidden="true" className="hero-orbit hero-orbit-outer absolute -right-16 -top-20 h-56 w-56 rounded-full border border-royal/20" />
+                    <div className="relative">
+                      <p className="font-code text-xs uppercase tracking-[0.16em] text-royal-soft">Have an idea?</p>
+                      <h3 className="mt-4 max-w-xs text-2xl font-semibold leading-tight text-white sm:text-3xl">
+                        Let’s make something people love.
+                      </h3>
+                      <p className="mt-4 text-sm leading-6 text-slate-400">
+                        I’m always happy to hear about a thoughtful new project.
+                      </p>
+                    </div>
+                    <a
+                      href="#contact"
+                      className="glass-shine relative z-10 mt-8 inline-flex w-fit items-center gap-2 rounded-full border border-white/20 px-4 py-2.5 text-sm font-medium text-white transition hover:border-royal-soft hover:text-royal-soft"
+                    >
+                      Let’s talk <span aria-hidden="true">↗</span>
+                    </a>
+                  </aside>
+                )}
               </div>
             </div>
           ))}

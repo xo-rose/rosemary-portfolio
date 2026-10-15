@@ -8,9 +8,9 @@ export default function Contact() {
           <p className="mt-3 max-w-lg text-sm leading-7 text-slate-400">I’d love to hear about it. Send me an email or find me on LinkedIn and GitHub.</p>
         </div>
         <div className="flex flex-wrap items-center gap-3">
-          <a href="mailto:ndrosee20@gmail.com" className="w-fit rounded-full bg-royal px-5 py-3 text-sm font-semibold text-white transition hover:bg-royal/90">Email me <span aria-hidden="true">↗</span></a>
-          <a href="https://www.linkedin.com/in/rose-nd-6662a529b/" target="_blank" rel="noreferrer" className="w-fit rounded-full border border-white/20 px-5 py-3 text-sm font-medium text-white transition hover:border-royal-soft hover:text-royal-soft">LinkedIn <span aria-hidden="true">↗</span></a>
-          <a href="https://github.com/xo-rose" target="_blank" rel="noreferrer" className="w-fit rounded-full border border-white/20 px-5 py-3 text-sm font-medium text-white transition hover:border-royal-soft hover:text-royal-soft">GitHub <span aria-hidden="true">↗</span></a>
+          <a href="mailto:ndrosee20@gmail.com" className="glass-shine w-fit rounded-full bg-royal px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-1 hover:bg-royal/90 hover:shadow-lg hover:shadow-royal/25">Email me <span aria-hidden="true">↗</span></a>
+          <a href="https://www.linkedin.com/in/rose-nd-6662a529b/" target="_blank" rel="noreferrer" className="glass-shine w-fit rounded-full border border-white/20 px-5 py-3 text-sm font-medium text-white transition hover:-translate-y-1 hover:border-royal-soft hover:bg-white/5 hover:text-royal-soft">LinkedIn <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/xo-rose" target="_blank" rel="noreferrer" className="glass-shine w-fit rounded-full border border-white/20 px-5 py-3 text-sm font-medium text-white transition hover:-translate-y-1 hover:border-royal-soft hover:bg-white/5 hover:text-royal-soft">GitHub <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>

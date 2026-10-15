@@ -13,10 +13,10 @@ export default function Hero() {
           I’m Rosemary Ndubuisi. I turn ideas into clear, engaging web experiences with a focus on thoughtful details and dependable code.
         </p>
         <div className="mt-9 flex flex-wrap items-center gap-5">
-          <a href="#projects" className="rounded-full bg-royal px-6 py-3 text-sm font-semibold text-white transition hover:bg-royal/90 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-royal">
+          <a href="#projects" className="glass-shine rounded-full bg-royal px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-1 hover:bg-royal/90 hover:shadow-lg hover:shadow-royal/25 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-royal">
             Explore my work <span aria-hidden="true">↓</span>
           </a>
-          <a href="#about" className="text-sm font-medium text-slate-300 transition hover:text-white">
+          <a href="#about" className="glass-shine rounded-full px-3 py-2 text-sm font-medium text-slate-300 transition hover:-translate-y-0.5 hover:bg-white/5 hover:text-white">
             A little about me <span aria-hidden="true">↗</span>
           </a>
         </div>

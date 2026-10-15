@@ -11,7 +11,7 @@ export default function Navbar() {
         <div className="flex items-center gap-4 text-sm text-slate-300 sm:gap-8">
           <a href="#projects" className="hidden transition hover:text-white sm:inline">Projects</a>
           <a href="#about" className="hidden transition hover:text-white sm:inline">About</a>
-          <a href="#contact" className="rounded-full bg-royal px-4 py-2 font-medium text-white transition hover:bg-royal/90 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-royal">
+          <a href="#contact" className="glass-shine rounded-full bg-royal px-4 py-2 font-medium text-white transition hover:-translate-y-0.5 hover:bg-royal/90 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-royal">
             Contact <span aria-hidden="true">↗</span>
           </a>
         </div>

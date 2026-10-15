@@ -58,12 +58,18 @@ a {
   50% { transform: rotate(8deg) translateY(-5px); }
 }
 
+@keyframes mascot-float {
+  0%,
+  100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
 [data-reveal] {
   opacity: 0;
   transform: translate3d(0, 22px, 0);
   transition:
-    opacity 680ms cubic-bezier(0.2, 0.7, 0.2, 1),
-    transform 680ms cubic-bezier(0.2, 0.7, 0.2, 1);
+    opacity 900ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 900ms cubic-bezier(0.2, 0.7, 0.2, 1);
   transition-delay: var(--reveal-delay, 0ms);
 }
 
@@ -73,39 +79,43 @@ a {
 }
 
 .hero-identity-card {
-  animation: hero-float 7s ease-in-out infinite;
+  animation: hero-float 15s ease-in-out infinite;
   transform-origin: center;
 }
 
 .hero-card-frame {
-  animation: glow-breathe 8s ease-in-out infinite;
+  animation: glow-breathe 18s ease-in-out infinite;
 }
 
 .hero-orbit-outer {
-  animation: orbit-turn 36s linear infinite;
+  animation: orbit-turn 90s linear infinite;
   transform-origin: center;
 }
 
 .hero-orbit-inner {
-  animation: orbit-turn 24s linear infinite reverse;
+  animation: orbit-turn 64s linear infinite reverse;
   transform-origin: center;
 }
 
 .hero-glow {
-  animation: glow-breathe 6s ease-in-out infinite;
+  animation: glow-breathe 16s ease-in-out infinite;
 }
 
 .hero-rose {
   display: inline-block;
   transform-origin: 50% 85%;
-  animation: rose-sway 3.2s ease-in-out infinite;
+  animation: rose-sway 7.5s ease-in-out infinite;
+}
+
+.pikahabit-image {
+  animation: mascot-float 9s ease-in-out infinite;
 }
 
 .project-card {
   transition:
-    transform 260ms ease,
-    border-color 260ms ease,
-    box-shadow 260ms ease;
+    transform 380ms ease,
+    border-color 380ms ease,
+    box-shadow 380ms ease;
 }
 
 .project-card:hover {
@@ -114,6 +124,44 @@ a {
 
 .contact-card {
   transition: transform 280ms ease, border-color 280ms ease, box-shadow 280ms ease;
+}
+
+.glass-shine {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transition: transform 320ms ease, box-shadow 320ms ease, background-color 320ms ease;
+}
+
+.glass-shine::after {
+  position: absolute;
+  z-index: 2;
+  top: -65%;
+  bottom: -65%;
+  left: -45%;
+  width: 34%;
+  content: '';
+  pointer-events: none;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgb(255 255 255 / 9%) 30%,
+    rgb(255 255 255 / 48%) 50%,
+    rgb(255 255 255 / 10%) 70%,
+    transparent 100%
+  );
+  transform: translateX(-230%) skewX(-22deg);
+  transition: transform 950ms cubic-bezier(0.2, 0.65, 0.25, 1);
+}
+
+.glass-shine:hover::after,
+.glass-shine:focus-visible::after {
+  transform: translateX(610%) skewX(-22deg);
+}
+
+.glass-shine:hover,
+.glass-shine:focus-visible {
+  box-shadow: 0 10px 28px rgb(65 105 225 / 18%);
 }
 
 .contact-card:hover {
@@ -139,4 +187,6 @@ a {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
   }
+
+  .glass-shine::after { display: none; }
 }
