@@ -35,3 +35,108 @@ body {
 a {
   text-decoration: none;
 }
+
+@keyframes hero-float {
+  0%,
+  100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(-0.35deg); }
+}
+
+@keyframes orbit-turn {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes glow-breathe {
+  0%,
+  100% { opacity: 0.55; transform: scale(0.94); }
+  50% { opacity: 0.95; transform: scale(1.08); }
+}
+
+@keyframes rose-sway {
+  0%,
+  100% { transform: rotate(-8deg) translateY(0); }
+  50% { transform: rotate(8deg) translateY(-5px); }
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 22px, 0);
+  transition:
+    opacity 680ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 680ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.hero-identity-card {
+  animation: hero-float 7s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.hero-card-frame {
+  animation: glow-breathe 8s ease-in-out infinite;
+}
+
+.hero-orbit-outer {
+  animation: orbit-turn 36s linear infinite;
+  transform-origin: center;
+}
+
+.hero-orbit-inner {
+  animation: orbit-turn 24s linear infinite reverse;
+  transform-origin: center;
+}
+
+.hero-glow {
+  animation: glow-breathe 6s ease-in-out infinite;
+}
+
+.hero-rose {
+  display: inline-block;
+  transform-origin: 50% 85%;
+  animation: rose-sway 3.2s ease-in-out infinite;
+}
+
+.project-card {
+  transition:
+    transform 260ms ease,
+    border-color 260ms ease,
+    box-shadow 260ms ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 18px 44px rgb(0 0 0 / 22%);
+}
+
+.contact-card {
+  transition: transform 280ms ease, border-color 280ms ease, box-shadow 280ms ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  border-color: rgb(154 175 255 / 45%);
+  box-shadow: 0 22px 55px rgb(65 105 225 / 12%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

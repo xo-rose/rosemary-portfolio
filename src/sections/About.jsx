@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section id="about" className="scroll-mt-8 mx-auto grid max-w-6xl gap-8 px-5 py-20 sm:px-8 sm:py-24 lg:grid-cols-[0.7fr_1.3fr]">
+    <section id="about" data-reveal className="scroll-mt-8 mx-auto grid max-w-6xl gap-8 px-5 py-20 sm:px-8 sm:py-24 lg:grid-cols-[0.7fr_1.3fr]">
       <div>
         <p className="font-code text-xs font-medium uppercase tracking-[0.18em] text-royal-soft">A little about me</p>
         <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Curiosity meets craft.</h2>

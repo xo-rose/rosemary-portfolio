@@ -83,7 +83,7 @@ export default function Projects() {
       className="scroll-mt-8 border-y border-white/[0.08] bg-white/[0.02]"
     >
       <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">
-        <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+        <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end" data-reveal>
           <div>
             <p className="font-code text-xs font-medium uppercase tracking-[0.18em] text-royal-soft">
               Selected work
@@ -106,7 +106,7 @@ export default function Projects() {
           tabIndex={0}
           className="mt-10 flex snap-x snap-mandatory overflow-x-auto scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
-          {slides.map((slide, slideIndex) => (
+          {slides.map((slide) => (
             <div
               key={slide[0].id}
               aria-label={`Projects ${slide[0].id} to ${slide.at(-1).id}`}
@@ -114,13 +114,15 @@ export default function Projects() {
               className="w-full shrink-0 snap-start"
             >
               <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-                {slide.map((project) => (
+                {slide.map((project, projectIndex) => (
                   <article
                     key={project.id}
-                    className="group min-w-0 rounded-2xl border border-white/10 bg-slate-900/60 p-5 transition hover:-translate-y-1 hover:border-royal/50 sm:p-6"
+                    data-reveal
+                    style={{ '--reveal-delay': `${projectIndex * 80}ms` }}
+                    className="project-card group min-w-0 rounded-2xl border border-white/10 bg-slate-900/60 p-5 transition hover:-translate-y-1 hover:border-royal/50 sm:p-6"
                   >
                     <div
-                      className={`relative mb-6 flex aspect-[1.4/1] items-center justify-center overflow-hidden rounded-xl border border-white/[0.06] ${
+                      className={`project-art relative mb-6 flex aspect-[1.4/1] items-center justify-center overflow-hidden rounded-xl border border-white/[0.06] ${
                         project.artStyle === 'pikahabit'
                           ? 'bg-[#100f15]'
                           : project.artStyle === 'rovelle'

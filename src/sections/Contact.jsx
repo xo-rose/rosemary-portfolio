@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
     <section id="contact" className="scroll-mt-8 mx-auto max-w-6xl px-5 pb-20 sm:px-8 sm:pb-24">
-      <div className="flex flex-col justify-between gap-8 rounded-3xl border border-royal/25 bg-gradient-to-br from-royal/10 to-royal/5 p-8 sm:flex-row sm:items-center sm:p-12">
+      <div data-reveal className="contact-card flex flex-col justify-between gap-8 rounded-3xl border border-royal/25 bg-gradient-to-br from-royal/10 to-royal/5 p-8 sm:flex-row sm:items-center sm:p-12">
         <div>
           <p className="font-code text-xs font-medium uppercase tracking-[0.18em] text-royal-soft">Get in touch</p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Have a good idea?</h2>
