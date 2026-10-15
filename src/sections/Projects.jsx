@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import agroPlugMarket from '../assets/agroplug-market.jpg'
 import materDeiCathedral from '../assets/mater-dei-cathedral.jpg'
-import pikahabitMascot from '../assets/pikahabit-mascot.png'
+import pikahabitMascot from '../assets/pikahabit-mascot.gif'
 import rovelleVelvetRose from '../assets/rovelle-velvet-rose.png'
 
 const projects = [
@@ -35,7 +35,7 @@ const projects = [
       'A friendly reminder app for the little things that are easy to forget, like drinking water or studying. Add a reminder, choose when it repeats, and get a gentle browser nudge.',
     technologies: ['HTML', 'CSS', 'JavaScript', 'Browser Notifications'],
     image: pikahabitMascot,
-    imageAlt: 'Pikachu mascot illustration from PikaHabit',
+    imageAlt: 'Animated Pikachu mascot from PikaHabit',
     imageFit: 'contain',
     artStyle: 'pikahabit',
     websiteUrl: 'https://pikahabit-rho.vercel.app/',
@@ -151,9 +151,9 @@ export default function Projects() {
                           <img
                             src={project.image}
                             alt={project.imageAlt}
-                            className={`absolute inset-0 h-full w-full transition duration-700 group-hover:scale-[1.03] ${
+                            className={`absolute inset-0 h-full w-full transition duration-500 group-hover:scale-[1.03] ${
                               project.imageFit === 'contain' ? 'object-contain p-3' : 'object-cover'
-                            } ${project.artStyle === 'pikahabit' ? 'pikahabit-image drop-shadow-[0_0_24px_rgba(255,211,44,0.35)]' : ''}`}
+                            } ${project.artStyle === 'pikahabit' ? 'drop-shadow-[0_0_24px_rgba(255,211,44,0.35)]' : ''}`}
                           />
                           {project.artStyle !== 'rovelle' && (
                             <div
