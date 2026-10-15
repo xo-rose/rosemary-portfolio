@@ -1,6 +1,7 @@
 import agroPlugMarket from '../assets/agroplug-market.jpg'
 import materDeiCathedral from '../assets/mater-dei-cathedral.jpg'
 import pikahabitMascot from '../assets/pikahabit-mascot.gif'
+import rovelleVelvetRose from '../assets/rovelle-velvet-rose.png'
 
 const projects = [
   {
@@ -38,6 +39,17 @@ const projects = [
     artStyle: 'pikahabit',
     websiteUrl: 'https://pikahabit-rho.vercel.app/',
   },
+  {
+    id: '04',
+    category: 'Deodorant storefront demo',
+    title: 'Rovelle',
+    description:
+      'A polished demo store for a personal deodorant brand, with a searchable collection of spray and roll-on scents, size options, a shopping bag, and a sample customer dashboard.',
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    image: rovelleVelvetRose,
+    imageAlt: 'Rovelle Velvet Rose spray deodorant with roses',
+    websiteUrl: 'https://rovelle-nine.vercel.app/',
+  },
 ]
 
 export default function Projects() {
@@ -61,7 +73,7 @@ export default function Projects() {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-4 md:grid-cols-3">
+        <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {projects.map((project) => (
             <article
               key={project.id}
